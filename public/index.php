@@ -13,14 +13,13 @@ while ($row = $result->fetch_assoc()) {
     echo "<h4>{$row['title']}</h4>";
     echo "<p>{$row['content']}</p>";
     echo "<small>{$row['created_at']}</small><br>";
-    echo "<a href='#'>Edit</a>";
-    echo "<a href='#'>Delete</a>";
+    echo "<a href='edit.php?id={$row['id']}'>Edit</a>";
+    echo "<a href='delete.php?id={$row['id']}'>Delete</a>";
 }
 
 ?>
 
 
 <!-- PHP CODE ENDS HERE -->
-</body>
 
-</html>
+<?php include '../includes/footer.php' ?>
